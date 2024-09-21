@@ -2,15 +2,15 @@
 
 <img src="https://imgur.com/38Q4TnW.png"/>
 
-We are presented with this html page having a string and told to encrpyt it with MD5 but when we try to submit it after encrpyting we get a message "Too Slow"
+Нам показывают эту html-страницу со строкой и просят зашифровать ее с помощью MD5, но когда мы пытаемся отправить ее после шифрования, мы получаем сообщение "Слишком медленно".
 
 <img src="https://imgur.com/Cqov6VD.png"/>
 
-Intercepting the request with `Burp Suite` and found that we have to make a POST request to send the MD5 hash
+Перехватив запрос с помощью `Burp Suite`, мы обнаружили, что нам нужно сделать POST-запрос для отправки хэша MD5
 
 <img src="https://i.imgur.com/iOW0886.png"/>
 
-Also the string is generated randomly so we need to script it and the best language for this is python so I used python libraries `requests` , `hashlib` and `BeautifulSoup`
+Кроме того, строка генерируется случайным образом, поэтому нам нужно написать для нее сценарий, и лучший язык для этого - python, поэтому я использовал библиотеки `python requests`, `hashlib` и `BeautifulSoup`
 
 ```python
 import hashlib
@@ -40,4 +40,4 @@ print(response.text)
 
 <img src="https://i.imgur.com/UOndl6L.png"/>
 
-We got the flag !!!
+У нас есть флаг!!!
